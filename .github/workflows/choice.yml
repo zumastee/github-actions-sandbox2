@@ -1,0 +1,10 @@
+name: Choice
+on:
+  workflow_dispatch:
+    inputs:
+      log-lelvel :
+        type: choice
+        options:
+          - info
+          - warn
+          - error
