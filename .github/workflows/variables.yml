@@ -1,0 +1,6 @@
+name: Variables
+on: push
+jobs:
+  print:
+    env:
+      USERNAME_TEST: $${{ vars.username }} # 環境変数を定義
