@@ -1,0 +1,15 @@
+name: Runner
+on: push
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ runner.os }}"
+      - run: echo "${{ runner.name }}"
+      - run: echo "${{ runner.temp }}"
+      - run: echo "${{ runner.tool_cache }}"
+      - run: echo "${{ runner.workspace }}"
+      - run: echo "${{ runner.labels }}"
+      - run: echo "${{ runner.job_id }}"
+      - run: echo "${{ runner.run_id }}"
+      - run: echo "${{ runner.repo }}"
