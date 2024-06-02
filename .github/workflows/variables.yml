@@ -2,5 +2,8 @@ name: Variables
 on: push
 jobs:
   print:
+    runs-on: ubuntu-latest
     env:
-      USERNAME_TEST: $${{ vars.username }} # 環境変数を定義
+      USERNAME_TEST: $${{ vars.username }} # Variablesの参照
+    steps:
+      - run: echo "${USERNAME_TEST}"
