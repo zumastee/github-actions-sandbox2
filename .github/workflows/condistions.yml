@@ -2,7 +2,7 @@ name: Conditions
 on: push
 jobs:
   skip-or-run:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - run: echo "Hello"
         if: ${{ contains(github.run_id, '1')}} # ワークフロー実行IDで分岐
