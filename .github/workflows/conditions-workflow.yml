@@ -3,6 +3,6 @@ on: push
 jobs:
   skip-or-run:
     if: ${{ github.actor == '123456'}} # 123456のアクターのみ実行
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - run: echo "Hello"
