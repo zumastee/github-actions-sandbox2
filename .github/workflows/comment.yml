@@ -1,0 +1,13 @@
+name: Comment
+on: pull_request
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    permissions: # GITHUB_TOKENの権限を指定
+      pull-requests: write # PRの書き込みを許可
+      contents: read # ソースコードの読み込みを許可
+    steps:
+      - uses: actions/checkout@v4
+      - run: gh pr comment "${GITHUB_HEAD_REF}" --body "Hello, ${GITHUB_ACTOR}" # ソースブランチ名をGITHUB_HEAD_REFから取得し、コメント対象のPRを識別する メッセージを--bodyフラグへ指定し、コメントを書く
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GITHUB_CLI用のクレデンシャル
