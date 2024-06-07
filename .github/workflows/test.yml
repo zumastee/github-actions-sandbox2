@@ -1,13 +1,13 @@
 name: Test
 on: 
-  pull_request: # PRが作成されたら起動
-    paths:['go/**/*.go'] # Goのファイル変更時のみ
+  pull_request: # PRが作成されたら起動 
+    paths: ['go/**/*.go'] # Goのファイル変更時のみ 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4 # ステップ1:チェックアウト
-      - uses: actions/setup-go@v5 # ステップ2:Goのセットアップ
+      - uses: actions/checkout@v4 # ステップ1:チェックアウト 
+      - uses: actions/setup-go@v5 # ステップ2:Goのセットアップ 
         with:
           go-version: '1.22'
-      - run: go test go/excellent/*.go # ステップ3:テストの実行
+      - run: go test go/excellent/*.go # ステップ3:テストの実行 
