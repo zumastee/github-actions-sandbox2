@@ -5,7 +5,7 @@ on:
 defaults: # デフォルトシェル
   run:
     shell: bash
-concrrency: # 自動キャンセル
+concurrency: # 自動キャンセル
   group: ${{github.workflow}}-${{github.ref}} 
   cancel-in-progress: true
 jobs:
