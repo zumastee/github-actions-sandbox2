@@ -1,0 +1,15 @@
+name: Parallel jobs
+on: push
+jobs: # jobsキーへ複数ジョブを定義すれば、並列実行される
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 10 && echo "First job done"
+  second:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 10 && echo "Second job done"
+  third:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 10 && echo "Third job done"
