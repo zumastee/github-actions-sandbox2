@@ -14,4 +14,4 @@ jobs:
     steps:
       - env:
           RESULT: ${{needs.before.outputs.result}} # 前のジョブの出力値を環境変数に設定
-      run: echo "Result: $RESULT" # 環境変数を利用して出力
+        run: echo "Result: $RESULT" # 環境変数を利用して出力
