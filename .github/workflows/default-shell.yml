@@ -1,0 +1,11 @@
+name: default shell
+on: push
+defaults:
+  run:
+    shell: bash # ワークローで使うデフォルトシェルを指定
+jobs:
+  default-shell:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${SHELL}"
+      - run: echo "${PATH}"
