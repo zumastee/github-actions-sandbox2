@@ -10,7 +10,7 @@ jobs:
       result: ${{ steps.generate.outputs.result }} # ステップの出力値をジョブレベルで利用
   after:
     runs-on: ubuntu-latest
-    needs: before
+    needs: [before] # beforeジョブの完了を待つ
     steps:
       - env:
           RESULT: ${{needs.before.outputs.result}} # 前のジョブの出力値を環境変数に設定
