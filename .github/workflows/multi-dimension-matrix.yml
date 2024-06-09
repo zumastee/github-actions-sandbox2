@@ -1,0 +1,14 @@
+name: Multi-dimension matrix
+on: push
+jobs:
+  print:
+    strategy:
+      matrix:                                # 多次元マトリックスの定義
+        os: [ubuntu-latest, macos-latest]    # osの値
+        node: [18,20]                        # version プロパティの参照
+    runs-on: ${{ matrix.os }}                # os プロパティの参照
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.version }} # version プロパティの参照
+      - run: echo "${RUNNER_OS}" && node --version
