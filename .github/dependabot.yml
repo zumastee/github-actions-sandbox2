@@ -1,0 +1,6 @@
+version: 
+updates:
+  - package-ecosystem: github-actions # パッケージエコシステム
+    directory: /                      # パッケージマニフェストの配置先ディレクトリ
+    schedule:                         # 更新スケジュール
+      interval: daily
