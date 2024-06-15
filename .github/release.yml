@@ -1,0 +1,14 @@
+changelog:
+  categories: # リリースノートのカテゴリ設定
+    - title: Enhancement # リリースノートへ「Enhancement」というカテゴリを作成する
+      labels:
+        - enhancement # enhancement ラベルが付いている PR が含まれる
+    - title: Bug Fixes
+      labels: # PRのラベルは複数定義ができる
+        - bug # bug ラベルが付いている PR が含まれる
+        - fix # fix ラベルが付いている PR が含まれる
+  exclude: # リリースノートの外設定
+    labels:
+      - dependencies 
+    authors: # 除外するPR作成者
+      - dependabot
