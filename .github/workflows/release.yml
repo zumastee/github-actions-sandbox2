@@ -7,7 +7,7 @@ jobs:
   release:
     runs-on: ubuntu-latest
     env:
-      VERSION: ${{github.ref_name}} # v1.2.3のような値をGitタグから取得
+      VERSION: ${{ github.ref_name }} # v1.2.3のような値をGitタグから取得
     permissions:
       contents: write   # リリースノートの作成に必要なパーミッション
     steps:
