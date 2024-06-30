@@ -26,8 +26,8 @@ jobs:
         with:
           images: ghcr.io/${{ github.repository_owner }}:${{ github.IMAGE_NAME }}
           tags: |
-            type=semver.pattern={{version}},value=v$${{inputs.version}}
-            type=rawmvalue=latest
+            type=semver,pattern={{version}},value=v$${{inputs.version}}
+            type=raw,value=latest
       - uses: docker/build-push-action@v5 # コンテナイメージのビルドとプッシュ
         with:
           push: true
