@@ -8,7 +8,7 @@ jobs:
         node: [18,20]                        # version プロパティの参照
     runs-on: ${{ matrix.os }}                # os プロパティの参照
     steps:
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.version }} # version プロパティの参照
       - run: echo "${RUNNER_OS}" && node --version
